@@ -68,7 +68,12 @@ header{
 .fa-circle-user-color{
     color: rgb(247, 87, 1);
 }
-
+.post{
+    color: white;
+}
+.post:hover{
+    color: rgb(247, 87, 1);
+}
 /* ************************************************************************* */
 
 /* SLIDER */
@@ -150,7 +155,7 @@ header{
     cursor: pointer;
     margin:0 100px;
 }
-.fa-magnifying-glass{
+.fa-magnifying-glass,.fa-paper-plane{
     color:black;
 }
 .front{

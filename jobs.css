@@ -14,20 +14,151 @@
 /* ____________Styling____________ */
 *, *::before, *::after{
     box-sizing: border-box;
-    font-family: 'Spartan', sans-serif;
-
+    /* font-family: 'Spartan', sans-serif; */
     padding: 0;
     border: none;
     margin: 0;
 }
-
+a{
+    text-decoration: none;
+}
+header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(124, 115, 115);
+    font-family: montserratsemibold !important;
+    font-weight: 400;
+    transition: all 0.5s ease-in;
+}
+.header-color{
+    background: linear-gradient(to bottom, rgba(0,0,0,10) 0%,rgba(255,255,255,0) 100%);
+    background-color: #3a488b;
+    color: white;
+     /*background-color: #3a488b; 
+     background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e); */
+}
+.Logo{
+    margin: 20px 20px 20px 40px;
+    cursor: pointer;
+}
+.Logo-name{
+    color: rgb(124, 115, 115);
+}
+.Logo-name-color{
+    color: white;
+}
+.Logo-name:hover{
+    color: rgb(247, 87, 1);
+}
+.navigation_links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    list-style-type:none;
+    margin:20px 40px 20px 20px;
+    cursor: pointer;
+}
+.links>li{
+    margin-right: 20px;
+    font-size: 20px;
+}
+.links>li:hover{
+    color: rgb(247, 87, 1);
+}
+.fa-circle-user{
+    margin-left: -10px;
+    transition: all 0.5s ease-in;
+}
+.fa-circle-user-color{
+    color: rgb(247, 87, 1);
+}
+footer{
+    flex-direction: column;
+    background-color: #002449;
+    color: white;
+}
+.Connections{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 20px 140px 10px 140px;
+}
+.Connect{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+}
+.Social-media-icons{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+.icon-instagram, .icon-facebook , .icon-twitter{
+    margin:10px 20px 0 0;
+    color:white;
+}
+.fa-instagram:hover{
+    color: #0976b4;
+    background: #d6249f;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.fa-facebook:hover {
+    color: #3b5998;
+}
+.fa-twitter:hover{
+    color: #55acee;
+}
+.fa-envelope{
+    margin: 10px 10px 10px 0;
+}
+.mail-text{
+    color: white;
+    font-size: 18px;
+}
+.mail-text:hover{
+    color: rgb(247, 87, 1);
+}
+.fa-phone{
+    margin: 10px 10px 10px 0;
+}
+.Contact{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+.contact-numbers-positon{
+    margin: 0 70px 0 0;
+}
+.copyright-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    margin: 10px 0 0 0;
+    padding: 0 0 10px 0;
+}
 body{
-    background: linear-gradient(rgb(0,0,139) 11.4vw,
-                                var(--Light-Grayish-Cyan) 11.4vw)
-                no-repeat;
+    /* background: linear-gradient(to bottom, rgba(0,0,0,10) 0%,rgba(255,255,255,0) 100%)no-repeat;
+    background-color: #3a488b ; */
     background-size: 100vw;
-
-    min-height: 100vh;
+    background-color: #e2e8f0;
+    height: 100vh;
     height: 100%;
 }
 
@@ -35,10 +166,10 @@ main{
     display: flex;
     flex-direction: column;
     gap: 2em;
-
     width: 80%;
     margin: 20vw auto 4em;
     position: relative;
+    margin-top: 190px;
 }
 
 /* _________Job_________ */
@@ -56,7 +187,6 @@ main{
 
 .job:hover{
     box-shadow: 4px 4px 4px hsla(0, 0%, 0%, 0.2);
-    
 }
 
 .featured-job{
@@ -72,8 +202,9 @@ main{
 /* ______Top______ */
 .top{
     display: flex;
+    padding: 0.5em;
     grid-column: 2/3;
-    gap: 2%;
+    gap: 8%;
 }
 
 .top > p{
@@ -124,7 +255,7 @@ main{
     display: flex;
     grid-column: 2/3;
     gap: 2%;
-
+    padding: 0.5em;
     color: var(--Dark-Grayish-Cyan);
 }
 
@@ -144,18 +275,18 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    background: var(--Light-Grayish-Cyan);
-    color: var(--Desaturated-Dark-Cyan);
+    border: grey solid;
+    background: linear-gradient(to bottom,rgba(0,0,0,10)0%,rgba(255,255,2555,0)100%);
+    background-color: #3a488b;
+    color: white;
     cursor: pointer;
-
     height: 1.6em;
     padding: 0 .4em;
     border-radius: .2em;
 }
 
 .tags > .tag:hover{
-    background: var(--Desaturated-Dark-Cyan);
+    background: linear-gradient(to bottom,royalblue,#6DD5FA,#2980B9);
     color: var(--White);
 }
 
